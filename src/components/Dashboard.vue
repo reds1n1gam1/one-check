@@ -1,23 +1,74 @@
 <template>
-    <div v-for="(item, index) in list" :key="index">
-        {{  item.name }}
+    <div class="dashboard">
+        <div class="dashboard__header">
+            <p>Things to check before leave</p>
+        </div>
+        <div class="dashboard__content">
+            <CheckItem v-for="(item, index) in list" :key="index" :title="item.title" :icon="item.icon"></CheckItem>
+
+        </div>
     </div>
+
 </template>
 
 <script setup lang="ts">
+import CheckItem from './CheckItem.vue';
+
 type CheckupItem = {
-    name: string;
+    title: string;
+    icon: string;
 }
 
 const list: CheckupItem[] = [
     {
-        name: 'test1'
+        title: 'House Camera',
+        icon: 'camera'
     }, {
-        name: 'test2'
+        title: 'Computer',
+        icon: 'computer'
     },
     {
-        name: 'test3'
+        title: 'Water in shower',
+        icon: 'water'
+    },
+    {
+        title: 'Water in bathroom',
+        icon: 'water'
+    },
+    {
+        title: 'Water in kitchen',
+        icon: 'water'
+    },
+    {
+        title: 'Stove',
+        icon: 'fire-burner'
+    },
+    {
+        title: 'Toaster',
+        icon: 'bread-slice'
+    },
+    {
+        title: 'Main window in living room',
+        icon: 'house-chimney-window'
     },
 ]
 </script>
-<style scoped></style>
+<style scoped>
+.dashboard {
+    background: #2d2d2d;
+    border-radius: 12px;
+    padding: 12px 20px;
+}
+
+.dashboard__header {
+    font-size: 36px;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+.dashboard__content {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(5, 1fr);
+}
+</style>

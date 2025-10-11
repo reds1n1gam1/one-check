@@ -4,20 +4,19 @@ import Dashboard from './components/Dashboard.vue';
 </script>
 
 <template>
-  <Dashboard></Dashboard>
+  <div class="main">
+    <div class="header">
+
+    </div>
+    <div class="body">
+      <Dashboard></Dashboard>
+    </div>
+    <div class="footer">
+
+    </div>
+  </div>
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
