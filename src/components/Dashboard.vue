@@ -4,7 +4,9 @@
             <p>Things to check before leave</p>
         </div>
         <div class="dashboard__content">
-            <CheckItem v-for="(item, index) in list" :key="index" :title="item.title" :icon="item.icon"></CheckItem>
+            <CheckItem v-for="(item, index) in list" :key="index" :title="item.title" :icon="item.icon"
+                :state="item.state">
+            </CheckItem>
 
         </div>
     </div>
@@ -17,39 +19,48 @@ import CheckItem from './CheckItem.vue';
 type CheckupItem = {
     title: string;
     icon: string;
+    state: boolean;
 }
 
 const list: CheckupItem[] = [
     {
         title: 'House Camera',
-        icon: 'camera'
+        icon: 'camera',
+        state: true,
     }, {
         title: 'Computer',
-        icon: 'computer'
+        icon: 'computer',
+        state: false,
     },
     {
         title: 'Water in shower',
-        icon: 'water'
+        icon: 'water',
+        state: false,
     },
     {
         title: 'Water in bathroom',
-        icon: 'water'
+        icon: 'water',
+        state: false,
     },
     {
         title: 'Water in kitchen',
-        icon: 'water'
+        icon: 'water',
+        state: false,
     },
     {
         title: 'Stove',
-        icon: 'fire-burner'
+        icon: 'fire-burner',
+        state: false,
     },
     {
         title: 'Toaster',
-        icon: 'bread-slice'
+        icon: 'bread-slice',
+        state: false,
     },
     {
         title: 'Main window in living room',
-        icon: 'house-chimney-window'
+        icon: 'house-chimney-window',
+        state: false,
     },
 ]
 </script>
