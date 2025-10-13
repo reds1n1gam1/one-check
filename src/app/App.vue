@@ -8,7 +8,7 @@
 
     </div>
     <div class="body">
-      Test
+      <RouterView />
     </div>
     <div class="footer">
 
