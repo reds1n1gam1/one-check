@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Dashboard from './components/Dashboard.vue';
 
 </script>
 
@@ -9,7 +8,7 @@ import Dashboard from './components/Dashboard.vue';
 
     </div>
     <div class="body">
-      <Dashboard></Dashboard>
+      Test
     </div>
     <div class="footer">
 
