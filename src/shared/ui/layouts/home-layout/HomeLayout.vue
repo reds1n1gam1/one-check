@@ -1,14 +1,15 @@
 <template>
-    <v-layout :class="[styles.layout, 'rounded', 'rounded-md']" ref="app">
+    <div class="layout layout--home">
         <slot name="header"></slot>
         <slot name="navigation"></slot>
 
-        <v-main class="d-flex align-center justify-center" fill-height>
+        <div class="main">
             <slot />
-        </v-main>
+        </div>
 
         <slot name="footer"></slot>
-    </v-layout>
+
+    </div>
 </template>
 
 <script setup lang="ts">

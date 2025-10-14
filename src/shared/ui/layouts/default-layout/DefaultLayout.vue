@@ -1,12 +1,14 @@
 <template>
-  <v-layout class="rounded rounded-md" ref="app">
+  <div class="layout layout--default">
     <slot name="header"></slot>
     <slot name="navigation"></slot>
 
-    <v-main>
+    <div class="main">
+
       <slot />
-    </v-main>
+    </div>
 
     <slot name="footer"></slot>
-  </v-layout>
+
+  </div>
 </template>

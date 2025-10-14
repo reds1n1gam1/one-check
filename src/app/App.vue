@@ -1,11 +1,11 @@
 <template>
     <component :is="layout">
         <template v-slot:header>
-            <!-- <Header /> -->
+            <Header />
         </template>
 
         <template v-slot:navigation>
-            <!-- <Navigation /> -->
+            <Navigation />
         </template>
 
         <template v-slot:default>
@@ -13,16 +13,16 @@
         </template>
 
         <template v-slot:footer>
-            <!-- <Footer /> -->
+            <Footer />
         </template>
     </component>
 </template>
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-// import { Header } from '@/widgets/header'
-// import { Navigation } from '@/widgets/navigation'
-// import { Footer } from '@/shared/ui/footer'
+import { Header } from '@/widgets/header'
+import { Navigation } from '@/widgets/navigation'
+import { Footer } from '@/shared/ui/footer'
 import { DefaultLayout } from '@/shared/ui/layouts'
 
 const route = useRoute()
