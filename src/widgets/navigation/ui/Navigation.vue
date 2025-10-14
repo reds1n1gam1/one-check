@@ -2,7 +2,9 @@
     <div class="navigation">
         Navigation
         <div class="ul">
-            <li v-for="({ icon, title, to }, index) in items"> {{ title }} </li>
+            <li v-for="({ icon, title, to }, index) in items">
+                <RouterLink :to="to">{{ title }}</RouterLink>
+            </li>
         </div>
     </div>
 </template>

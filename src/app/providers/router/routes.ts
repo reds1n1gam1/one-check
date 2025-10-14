@@ -17,4 +17,11 @@ export const routes = [
             layout: DefaultLayout
         }
     },
+    {
+        path: '/check',
+        component: () => import('@/pages/check'),
+        meta: {
+            layout: DefaultLayout
+        }
+    },
 ]
