@@ -6,8 +6,6 @@
 
         <template v-slot:navigation>
             <!-- <Navigation /> -->
-            <RouterLink to="/">Go to Home</RouterLink>
-            <RouterLink to="/category">Go to Category</RouterLink>
         </template>
 
         <template v-slot:default>
