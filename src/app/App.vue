@@ -1,21 +1,38 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="main">
-    <div class="header">
+    <component :is="layout">
+        <template v-slot:header>
+            <!-- <Header /> -->
+        </template>
 
-    </div>
-    <div class="body">
-      <RouterView />
-    </div>
-    <div class="footer">
+        <template v-slot:navigation>
+            <!-- <Navigation /> -->
+            <RouterLink to="/">Go to Home</RouterLink>
+            <RouterLink to="/category">Go to Category</RouterLink>
+        </template>
 
-    </div>
-  </div>
+        <template v-slot:default>
+            <RouterView />
+        </template>
 
+        <template v-slot:footer>
+            <!-- <Footer /> -->
+        </template>
+    </component>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+// import { Header } from '@/widgets/header'
+// import { Navigation } from '@/widgets/navigation'
+// import { Footer } from '@/shared/ui/footer'
+import { DefaultLayout } from '@/shared/ui/layouts'
+
+const route = useRoute()
+
+// const layout = computed(() => route.meta.layout || DefaultLayout)
+const layout = DefaultLayout
+</script>
+
+<style>
+@import 'index.css';
 </style>
