@@ -4,21 +4,15 @@ import { DefaultLayout } from '@/shared/ui/layouts'
 export const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'Home page',
         component: () => import('@/pages/home'),
         meta: {
             layout: HomeLayout
         }
     },
     {
-        path: '/category',
-        component: () => import('@/pages/category'),
-        meta: {
-            layout: DefaultLayout
-        }
-    },
-    {
         path: '/check',
+        name: 'Check page',
         component: () => import('@/pages/check'),
         meta: {
             layout: DefaultLayout

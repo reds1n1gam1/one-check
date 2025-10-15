@@ -13,6 +13,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --oc-primary-color: #2d2d2d;
+  --oc-secondary-color: #686868;
+  --oc-accent-color: #72d7f0;
+  --oc-tertiary-color: #111111;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {

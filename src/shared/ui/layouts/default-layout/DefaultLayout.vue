@@ -1,10 +1,8 @@
 <template>
   <div class="layout layout--default">
     <slot name="header"></slot>
-    <slot name="navigation"></slot>
 
     <div class="main">
-
       <slot />
     </div>
 
@@ -12,3 +10,15 @@
 
   </div>
 </template>
+
+<style scoped>
+.layout {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.main {
+  padding: 24px 0;
+  min-height: 100%;
+}
+</style>

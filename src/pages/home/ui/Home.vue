@@ -1,19 +1,24 @@
 <template>
-    Home Page
+    <div class="main">
+        <div class="main__categories">
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
-// import { useHead } from '@unhead/vue'
-// import { useBookModel } from '@/entities/book'
-// import { BookSearch } from '@/features/book'
+import { CategoryItem } from '@/widgets/category-item';
 
-// useHead({
-//     title: 'Polka - Search book'
-// })
 
-// const bookModel = useBookModel()
-
-// onBeforeUnmount(() => {
-//     bookModel.$reset()
-// })
 </script>
+
+<style scoped>
+.main__categories {
+    display: grid;
+    gap: 20px;
+}
+</style>

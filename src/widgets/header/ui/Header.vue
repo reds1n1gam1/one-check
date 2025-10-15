@@ -1,14 +1,24 @@
 <template>
   <div class="header">
-    Header
-    <img class="header__logo" @click="goToHome" src="/public/logo.png" />
+    <div class="header__logo">
+      <i @click="goToHome" class="header__icon fa-solid fa-check-to-slot"></i>
+    </div>
+
+    <div class="header__center">
+      <p class="header__text"> {{ route.name }} </p>
+    </div>
+
+    <div class="header__settings-icon">
+      <i class="header__icon fa-solid fa-gear"></i>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 
 const goToHome = () => {
   router.push({ path: '/' })
@@ -16,11 +26,19 @@ const goToHome = () => {
 </script>
 
 <style scoped>
-.header__logo {
-  --oc-logo-size: 36px;
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: center;
+  align-items: center;
+}
 
-  width: var(--oc-logo-size);
-  height: var(--oc-logo-size);
-  object-fit: cover;
+.header__icon {
+  font-size: 24px;
+}
+
+.header__text {
+  font-size: 24px;
+  font-weight: 700;
 }
 </style>
