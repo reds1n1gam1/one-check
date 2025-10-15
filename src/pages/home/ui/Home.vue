@@ -1,18 +1,16 @@
 <template>
     <div class="main">
         <div class="main__categories">
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
+            <CategoryItem v-for="category in categoriesModel.categories" :category="category" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { CategoryItem } from '@/widgets/category-item';
+import { CategoryItem } from '@/entities/category-item';
+import { userCategoryModel } from '@/entities/category-item/model';
 
+const categoriesModel = userCategoryModel()
 
 </script>
 

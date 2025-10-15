@@ -3,9 +3,9 @@ export interface ICheckItem {
     title: string,
     icon: string,
     state: boolean,
+    category: string
 }
 
 export interface CheckItemModel {
-    categories: string[],
-    items: ICheckItem[]
+    checkItems: ICheckItem[]
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CheckItemList :items="checkItemsModel.items"/>
+        <CheckItemList :items="checkItemsModel.checkItems"/>
     </div>
 </template>
 

@@ -1,22 +1,23 @@
 <template>
     <div class="category" @click="openCategoryCheck">
         <div class="category__header">
-            <p class="category__title">Home check</p>
+            <p class="category__title"> {{ category.title  }} </p>
         </div>
         <div class="category__content">
-            <div class="category__description">Main things to check before leave home</div>
+            <div class="category__description"> {{ category.description  }}</div>
             <div class="category__icon-wrap">
-                <i class="fa-solid fa-house"></i>
+                <i :class="'fa-solid fa-' + category.icon"></i>
             </div>
             <div class="category__meta">
                 <div class="category__block category__block--left">Last check:</div>
-                <div class="category__block category__block--right">{{ Date.now() }}</div>
+                <div class="category__block category__block--right">{{ category.lastCheck }}</div>
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import type { ICategoryItem } from '@/entities/category-item/model/types';
 import { useRouter } from 'vue-router';
 
 const router = useRouter()
@@ -24,9 +25,9 @@ const router = useRouter()
 const openCategoryCheck = () => {
     router.push({ path: '/check' })
 }
-// defineProps<{
-//     items: ICheckItem[]
-// }>()
+defineProps<{
+    category: ICategoryItem
+}>()
 </script>
 
 <style scoped>
@@ -66,6 +67,7 @@ const openCategoryCheck = () => {
 
 .category__icon-wrap {
     font-size: 48px;
+    text-align: right;
 }
 
 .category__meta {
