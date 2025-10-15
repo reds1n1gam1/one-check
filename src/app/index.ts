@@ -5,4 +5,6 @@ import { router } from './providers'
 import { createPinia } from 'pinia'
 
 
-export const app = createApp(App).use(createPinia()).use(router)
+export const app = createApp(App)
+    .use(createPinia())
+    .use(router)
