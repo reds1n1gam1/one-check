@@ -22,8 +22,19 @@ defineProps<{
 </script>
 
 <style scoped>
+.check {
+    display: grid;
+    gap: 12px;
+}
+
+.check__title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .check__list {
     display: grid;
+    gap: 12px;
     grid-template-columns: repeat(5, 1fr);
 }
 </style>
