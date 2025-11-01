@@ -8,7 +8,7 @@ export const categoriesItemList: ICategoryItem[] = [
         icon: 'house',
         lastCheck: new Date(),
         state: false,
-        categoryCode:"home",
+        code:"home",
     },
     {
         id: 1,
@@ -17,6 +17,6 @@ export const categoriesItemList: ICategoryItem[] = [
         icon: 'car',
         lastCheck: new Date(),
         state: false,
-        categoryCode:"car",
+        code:"car",
     },
 ]

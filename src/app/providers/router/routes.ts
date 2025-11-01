@@ -11,9 +11,9 @@ export const routes = [
         }
     },
     {
-        path: '/check',
-        name: 'Check page',
-        component: () => import('@/pages/check'),
+        path: '/category/:categoryName',
+        name: 'Category page',
+        component: () => import('@/pages/category'),
         meta: {
             layout: DefaultLayout
         }

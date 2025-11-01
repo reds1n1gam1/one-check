@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CheckItemList :items="getItemsByCategory('home')" />
+        <CheckItemList :items="getItemsByCategory($route.params.categoryName)" />
     </div>
 </template>
 

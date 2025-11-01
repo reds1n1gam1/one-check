@@ -63,5 +63,5 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 
 ### Current tasks
 - [x] Show fitered items to check
-- [ ] Setup routing to show correct filtered items
+- [x] Setup routing to show correct filtered items
 - [ ] Save checked category and show as checked

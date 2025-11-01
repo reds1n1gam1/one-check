@@ -1,7 +1,7 @@
 export interface ICategoryItem {
     id: number,
     title: string,
-    categoryCode: string,
+    code: string,
     description: string,
     icon: string,
     lastCheck: Date,

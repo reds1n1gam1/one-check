@@ -1,10 +1,10 @@
 <template>
-    <div class="category" @click="openCategoryCheck">
+    <div class="category" @click="openCategoryCheck(category.code)">
         <div class="category__header">
-            <p class="category__title"> {{ category.title  }} </p>
+            <p class="category__title"> {{ category.title }} </p>
         </div>
         <div class="category__content">
-            <div class="category__description"> {{ category.description  }}</div>
+            <div class="category__description"> {{ category.description }}</div>
             <div class="category__icon-wrap">
                 <i :class="'fa-solid fa-' + category.icon"></i>
             </div>
@@ -22,8 +22,8 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
-const openCategoryCheck = () => {
-    router.push({ path: '/check' })
+const openCategoryCheck = (categoryName: string) => {
+    router.push({ path: `/category/${categoryName}` })
 }
 defineProps<{
     category: ICategoryItem
