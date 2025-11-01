@@ -12,9 +12,7 @@
 
 <script lang="ts">
 export default {
-    props: ['title', 'icon', 'state'],
-    setup(props) {
-    }
+    props: ['title', 'icon', 'state']
 }
 </script>
 

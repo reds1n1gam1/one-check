@@ -6,7 +6,8 @@
 
         <div class="check__list">
             <ul v-for="item in items" :key="String(item.id)">
-                <CheckItem :title="item.title" :icon="item.icon" :state="item.state" />
+                <CheckItem @click="store.toggleCheckItemState(item.id)" :title="item.title" :icon="item.icon"
+                    :state="item.state" />
             </ul>
         </div>
 
@@ -14,11 +15,13 @@
 </template>
 
 <script setup lang="ts">
-import { CheckItem, type ICheckItem } from '@/entities/check-item'
+import { CheckItem, useCheckItemModel, type ICheckItem } from '@/entities/check-item'
 
 defineProps<{
-    items: ICheckItem[] 
+    items: ICheckItem[]
 }>()
+
+const store = useCheckItemModel()
 </script>
 
 <style scoped>

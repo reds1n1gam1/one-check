@@ -1,5 +1,6 @@
 <template>
-    <div class="category" @click="openCategoryCheck(category.code)">
+    <div :class="'category ' + (category.state ? 'category--checked' : 'category--no-checked')"
+        @click="openCategoryCheck(category.code)">
         <div class="category__header">
             <p class="category__title"> {{ category.title }} </p>
         </div>
@@ -32,6 +33,7 @@ defineProps<{
 
 <style scoped>
 .category {
+    position: relative;
     width: 100%;
     height: auto;
     min-height: 200px;
@@ -40,6 +42,14 @@ defineProps<{
     padding: 24px;
     display: grid;
     gap: 12px;
+}
+
+.category--checked::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(256, 256, 256, 0.4);
+    border-radius: 24px;
 }
 
 .category__title {
