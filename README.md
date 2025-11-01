@@ -4,11 +4,20 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
+
+## Project description
+
+The project was made so that before leaving the house it would be possible to check that certain things had been checked.
+
+## Media
+
+![One click show](one-click-app.gif)
+
 ## ✅ Features Roadmap
 
 ### 🎯 Core Functionality
 
-- [ ] Track single-time checks (door, stove, windows, etc.)
+- [x] Track single-time checks (door, stove, windows, etc.)
 - [ ] Timestamp each check
 - [ ] Add custom check items
 - [ ] Optional photo proof for each check
@@ -53,17 +62,14 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ### 🚧 Future Ideas
 
 - [ ] After component mount we have empty list of files ( undefined )
-
-### 🚧 Future Ideas
-
 - [ ] Voice input for checks
 - [ ] Smart suggestions based on day/time
 - [ ] Sync across devices (via optional login)
 - [ ] Integration with smart home (e.g., detect stove/power status)
 
-### Current tasks
+### 🚧 Current tasks
 - [x] Show fitered items to check
 - [x] Setup routing to show correct filtered items
 - [x] Add plus button for feature functionality
-- [ ] Save checked category and show as checked
+- [x] Save checked category and show as checked
 - [ ] Add prettier
