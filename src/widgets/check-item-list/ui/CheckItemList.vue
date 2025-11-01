@@ -17,7 +17,7 @@
 import { CheckItem, type ICheckItem } from '@/entities/check-item'
 
 defineProps<{
-    items: ICheckItem[]
+    items: ICheckItem[] 
 }>()
 </script>
 

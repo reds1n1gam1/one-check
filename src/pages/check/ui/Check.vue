@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CheckItemList :items="checkItemsModel.checkItems"/>
+        <CheckItemList :items="store.getItemsToCheck"/>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { CheckItemList } from '@/widgets/check-item-list';
 import { useCheckItemModel } from '@/entities/check-item';
 
-const checkItemsModel = useCheckItemModel()
+const store = useCheckItemModel()
 </script>
 
 <style scoped></style>

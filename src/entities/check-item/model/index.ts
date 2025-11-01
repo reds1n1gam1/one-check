@@ -6,9 +6,8 @@ export const useCheckItemModel = defineStore('check-item', {
     state: () => <CheckItemModel>{
         checkItems: [...checkItemList]
     },
-
     getters: {
-
+        getItemsToCheck: state => state.checkItems
     },
 
     actions: {
