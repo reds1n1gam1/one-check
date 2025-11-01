@@ -64,4 +64,5 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ### Current tasks
 - [x] Show fitered items to check
 - [x] Setup routing to show correct filtered items
+- [x] Add plus button for feature functionality
 - [ ] Save checked category and show as checked
