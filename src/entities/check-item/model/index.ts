@@ -7,7 +7,9 @@ export const useCheckItemModel = defineStore('check-item', {
         checkItems: [...checkItemList]
     },
     getters: {
-        getItemsToCheck: state => state.checkItems
+        getItemsByCategory: (state) => {
+            return (categoryCode: string) => state.checkItems.filter((item) => item.category === categoryCode)
+        }
     },
 
     actions: {

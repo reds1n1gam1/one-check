@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 import { CategoryItem } from '@/entities/category-item';
-import { userCategoryModel } from '@/entities/category-item/model';
+import { useCategoryModel } from '@/entities/category-item/model';
 
-const categoriesModel = userCategoryModel()
+const categoriesModel = useCategoryModel()
 
 </script>
 

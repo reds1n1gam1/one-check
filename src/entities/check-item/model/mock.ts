@@ -56,4 +56,18 @@ export const checkItemList: ICheckItem[] = [
         category: 'home',
         state: false,
     },
+    {
+        id: 9,
+        title: 'Handbrake',
+        icon: 'car-side',
+        category: 'car',
+        state: false,
+    },
+    {
+        id: 10,
+        title: 'Windows',
+        icon: 'window-maximize',
+        category: 'car',
+        state: false,
+    },
 ]

@@ -60,3 +60,8 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 - [ ] Smart suggestions based on day/time
 - [ ] Sync across devices (via optional login)
 - [ ] Integration with smart home (e.g., detect stove/power status)
+
+### Current tasks
+- [x] Show fitered items to check
+- [ ] Setup routing to show correct filtered items
+- [ ] Save checked category and show as checked
