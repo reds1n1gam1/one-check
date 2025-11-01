@@ -14,7 +14,6 @@
 export default {
     props: ['title', 'icon', 'state'],
     setup(props) {
-        console.log(props.title)
     }
 }
 </script>
